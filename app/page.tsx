@@ -162,7 +162,6 @@ export default function SudokuPage() {
     }
   };
 
-  // --- TÍNH NĂNG CHIA SẺ ĐỂ TĂNG LƯỢT CHƠI (KIẾM TIỀN) ---
   const handleShare = (finalTime: string) => {
     const text = `Tôi vừa hoàn thành Sudoku mức ${difficulty} trong ${finalTime}! Thách bạn vượt qua tôi tại:`;
     const url = window.location.href;
@@ -187,7 +186,6 @@ export default function SudokuPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center py-10 px-4 text-slate-900 font-sans relative">
-      
       {/* VỊ TRÍ QUẢNG CÁO 1 (TOP BANNER) */}
       <div className="mb-6 w-full max-w-[728px] h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-gray-500 italic text-sm">
         Quảng cáo Google AdSense sẽ hiển thị ở đây
@@ -281,6 +279,21 @@ export default function SudokuPage() {
       <div className="mt-10 w-full max-w-[728px] h-24 bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-gray-500 italic text-sm">
         Quảng cáo Banner sẽ hiển thị tại đây
       </div>
+
+      {/* FOOTER ĐỂ GOOGLE DUYỆT ADSENSE */}
+      <footer className="mt-20 pb-10 text-center text-slate-500 border-t pt-8 w-full max-w-2xl">
+        <p className="font-bold text-slate-700">Sudoku Master Online</p>
+        <p className="text-sm mt-2">© 2026 Phát triển bởi Nguyễn Văn Tứ</p>
+        <div className="flex justify-center gap-6 mt-4 text-xs underline text-indigo-600">
+          <a href="#">Giới thiệu</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Liên hệ: nguyenvantu1004@gmail.com</a>
+        </div>
+        <p className="text-[10px] mt-6 leading-relaxed text-slate-400">
+          Sudoku Master cung cấp trải nghiệm chơi Sudoku miễn phí tốt nhất với thuật toán sinh đề ngẫu nhiên. 
+          Chúng tôi sử dụng quảng cáo để duy trì máy chủ và phát triển thêm các tính năng mới cho người dùng.
+        </p>
+      </footer>
 
       <style jsx global>{` @keyframes shine { 100% { transform: translateX(100%); } } `}</style>
     </div>
